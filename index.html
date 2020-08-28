@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			GIF as Background
+		</title>
+		<style type="text/css">
+		/*
+			body {
+				background-image: url('https://media0.giphy.com/media/wKnqovL33x9in9ci6X/giphy.gif');
+				background-size: contain;
+				background-repeat: repeat;
+				height: 100vh;
+				padding: 0px;
+				margin: 0px;
+				height: 100%;
+			}
+		*/
+			.box {
+				margin: auto;
+				width: 100%;
+				color: white;
+				text-align: center;
+				font-size: 250%;
+			}
+
+			html,body {
+			    width:100vw;
+			    height: 100vh;
+			    margin: 0;
+			}
+			#videoBG {
+			    position:fixed;
+			    z-index: -1;
+			}
+			@media (min-aspect-ratio: 16/9) {
+			    #videoBG {
+			        width:100%;
+			        height: auto;
+			    }
+			}
+			@media (max-aspect-ratio: 16/9) {
+			    #videoBG { 
+			        width:auto;
+			        height: 100%;
+			    }
+			}
+			@media (max-width: 767px) {
+			    #videoBG {
+			        display: none;
+			    }
+			    body {
+			        background: url('akira.mkv');
+			        background-size: cover;
+			    }
+			}
+			div {
+				background-color: black;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div data-video="uSQt4ckq-dg"
+			data-autoplay="1"
+			data-loop="1"
+			id="youtube-audio"
+			class="box">Click here to mute / unmute</div>
+
+	  	<script src="https://www.youtube.com/iframe_api"></script>
+	  	<script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+
+		<video autoplay muted loop id="videoBG">
+			<source src="akira.mkv" type="video/mp4">
+		</video>
+
+	</body>
+</html>
